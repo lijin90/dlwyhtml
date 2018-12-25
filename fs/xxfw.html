@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>防沙治沙综合示范区管理子系统</title>
+
+<link rel="stylesheet" href="css/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="css/demo.css" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="css/init.css">
+<link rel="stylesheet" href="css/xxfw.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/xxfw.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+<body>
+    <div class="zs-container">
+        <div class="zs-header clear">
+            <div class="choice-zq clear">
+                <div class="chioce-zq-content">
+                    <span class="zq-chioce">选择政区</span>
+                    <span class="chioce-i"></span> 
+                    <div class="zqList">
+                        <p>直辖市、省(自治区) :<span class="thisZq"></span></p>
+                        <ul id="zqList">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="chioce-user">
+                <ul class="clear">
+                    <li>
+                        <span class="users"></span>
+                        <span class="li-cont">用户名字</span>
+                    </li>
+                    <li>
+                        <span class="updataPwd"></span>
+                        <span class="li-cont">修改密码</span>
+                    </li>
+                    <li>
+                        <span class="cancellation"></span>
+                        <span class="li-cont">注销登录</span>
+                    </li>
+                    <li>
+                        <span class="helps"></span>
+                        <span class="li-cont">技术支持</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="zs-nav-list">
+            <ul class="clear">
+                <li><a href="../home/mh.html">首页</a></li>
+                <li><a href="ghgl.html">规划管理</a></li>
+                <li><a href="sjfx.html">数据分析</a></li>
+                <li><a href="zhgl.html">综合管理</a></li>
+                <li class="active-nav"><a href="xxfw.html">信息服务</a></li>
+            </ul>
+        </div>
+        <div class="zs-main clear">
+            <div class="zs-main-left zs-left">
+                <div class="zs-left-header">
+                    <span class="zs-left-header-home"></span>
+                    <span class="nowPosition">您现在的位置:</span>
+                    <span class="newPosition">首页-<i style="font-style: normal">信息服务</i></span>
+                </div>
+                <div class="zs-left-main">
+                    <div class="zs-tree-list">
+                        <div class="list-header clear">
+                            <span class="list-header-cont zs-left">信息服务</span>
+                            <span class="list-icon zs-right"></span>
+                        </div>
+                        <ul class="clear">
+                            <li class="active">新闻中心</li>
+                            <li>示范区情况</li>
+                            <li>治理措施</li>
+                            <li>政策法规</li>
+                            <li>互动交流</li>
+                            <li>公众教育</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="zs-main-right zs-left">
+                <div class="map-box1">
+                    <div class="map1" style="display: block">
+                        <div class="listxx" style="display:none">
+                            <div class="pageOnOff clear">
+                                <p class="zs-left">前一篇: 走进沙漠</p>
+                                <p class="zs-right">后一篇: 国家林业局关于</p>
+                            </div>
+                            <div class="xxList">
+                               <!--  详细内容 -->
+                            </div>
+                        </div>
+                        <div class="tableList">
+                            <div class="searchBox">
+                                <input type="text" name="sea" value="" placeholder="请输入标题进行模糊查询">
+                                <span class="seach-btn btn">查询</span>
+                                <span class="seach-fh btn">返回</span>
+                            </div>
+                            <div class="talbeBox">
+                                <table width="100%" class="table-talbe">
+                                    <tbody>
+                                         <tr>
+                                            <td class="zq-left">习近平:持续不懈推进三北工程建设 巩固和发展祖国北疆绿色生态屏障</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-30]</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="zq-left">400倍的跨越：从“一二三”到“二三一”</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-29]</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="zq-left">秦岭大熊猫种群数量和栖息地面积双增长</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-23]</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="zq-left">全国绿化委员会 国家林业和草原局关于积极推进大规模国土绿化行动的意见</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-19]</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="zq-left">河南省委省政府召开建设森林河南动员大会</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-16]</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="zq-left">国家林业和草原局、贵州省人民政府签署战略合作框架协议</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-15]</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="zq-left">内国家林业和草原局开展专项行动严厉打击犀牛和虎及其制品非法贸易</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-14]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="zq-left">国家林业和草原局林产工业规划设计院成立60周年</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-13]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="zq-left">“生态中国　美丽家园——中国野生动物保护生态摄影书画作品展”开幕</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-12]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="zq-left">全球圈养大熊猫种群数量达548只</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-09]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="zq-left">张建龙会见出席第二届世界生态系统治理论坛的国际保护组织负责人</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-08]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="zq-left">习近平向第五届世界互联网大会致贺信</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-14]</td>
+                                        </tr>
+                                         <tr>
+                                            <td class="zq-left">引领网信事业发展的思想指南</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-06]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="zq-left">国家林业和草原局开展形式主义、官僚主义问题集中整治</td>
+                                            <td class="zq-right">[发布时间 : 2018-11-05]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pageY clear">
+                                <div class="pageN zs-left">
+                                    <p>共计<span>1111</span>条信息</p>
+                                </div>
+                                <div class="fPage zs-right clear">
+                                    <span class="zs-left"><</span>
+                                    <ul class="zs-left">
+                                        <li class="selec">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                    <span class="zs-left">></span>
+                                    <span>
+                                        <select name="">
+                                            <option value="">10条/页</option>
+                                            <option value="">20条/页</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <span>跳</span>
+                                        <span><input type="text" placeholder="2" name="childPage"></span>
+                                        <span>页</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="listxx" style="display:none">
+                            <div class="pageOnOff clear">
+                                <p class="zs-left">前一篇: 走进沙漠</p>
+                                <p class="zs-right">后一篇: 国家林业局关于</p>
+                            </div>
+                            <div class="xxList">
+                                
+                            </div>
+                        </div>
+                        <div class="tableList">
+                            <div class="searchBox">
+                                <input type="text" name="sea" value="" placeholder="请输入标题进行模糊查询">
+                                <span class="seach-btn btn">查询</span>
+                                <span class="seach-fh btn">返回</span>
+                            </div>
+                            <div class="talbeBox">
+                                <table width="100%" class="table-talbe">
+                                    <tbody>
+                                         <tr>
+                                            <td class="zq-left">内蒙古大兴安岭林区权利支援吉林长火灾扑救纪实,5月17日,呼伦贝尔市陈巴尔虎扯呢吉林长发生森林火灾，火灾过滤面积约为8400公顷</td>
+                                            <td class="zq-right">[发布时间 : 2017 年 10 月 23 日]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pageY clear">
+                                <div class="pageN zs-left">
+                                    <p>共计<span>1111</span>条信息</p>
+                                </div>
+                                <div class="fPage zs-right clear">
+                                    <span class="zs-left"><</span>
+                                    <ul class="zs-left">
+                                        <li class="selec">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                    <span class="zs-left">></span>
+                                    <span>
+                                        <select name="">
+                                            <option value="">10条/页</option>
+                                            <option value="">20条/页</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <span>跳</span>
+                                        <span><input type="text" placeholder="2" name="childPage"></span>
+                                        <span>页</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="listxx" style="display:none">
+                            <div class="pageOnOff clear">
+                                <p class="zs-left">前一篇: 走进沙漠</p>
+                                <p class="zs-right">后一篇: 国家林业局关于</p>
+                            </div>
+                            <div class="xxList">
+                                
+                            </div>
+                        </div>
+                        <div class="tableList">
+                            <div class="searchBox">
+                                <input type="text" name="sea" value="" placeholder="请输入标题进行模糊查询">
+                                <span class="seach-btn btn">查询</span>
+                                <span class="seach-fh btn">返回</span>
+                            </div>
+                            <div class="talbeBox">
+                                <table width="100%" class="table-talbe">
+                                    <tbody>
+                                         <tr>
+                                            <td class="zq-left">内蒙古大兴安岭林区权利支援吉林长火灾扑救纪实,5月17日,呼伦贝尔市陈巴尔虎扯呢吉林长发生森林火灾，火灾过滤面积约为8400公顷</td>
+                                            <td class="zq-right">[发布时间 : 2017 年 10 月 23 日]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pageY clear">
+                                <div class="pageN zs-left">
+                                    <p>共计<span>1111</span>条信息</p>
+                                </div>
+                                <div class="fPage zs-right clear">
+                                    <span class="zs-left"><</span>
+                                    <ul class="zs-left">
+                                        <li class="selec">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                    <span class="zs-left">></span>
+                                    <span>
+                                        <select name="">
+                                            <option value="">10条/页</option>
+                                            <option value="">20条/页</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <span>跳</span>
+                                        <span><input type="text" placeholder="2" name="childPage"></span>
+                                        <span>页</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="listxx" style="display:none">
+                            <div class="pageOnOff clear">
+                                <p class="zs-left">前一篇: 走进沙漠</p>
+                                <p class="zs-right">后一篇: 国家林业局关于</p>
+                            </div>
+                            <div class="xxList">
+                                
+                            </div>
+                        </div>
+                        <div class="tableList">
+                            <div class="searchBox">
+                                <input type="text" name="sea" value="" placeholder="请输入标题进行模糊查询">
+                                <span class="seach-btn btn">查询</span>
+                                <span class="seach-fh btn">返回</span>
+                            </div>
+                            <div class="talbeBox">
+                                <table width="100%" class="table-talbe">
+                                    <tbody>
+                                         <tr>
+                                            <td class="zq-left">内蒙古大兴安岭林区权利支援吉林长火灾扑救纪实,5月17日,呼伦贝尔市陈巴尔虎扯呢吉林长发生森林火灾，火灾过滤面积约为8400公顷</td>
+                                            <td class="zq-right">[发布时间 : 2017 年 10 月 23 日]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pageY clear">
+                                <div class="pageN zs-left">
+                                    <p>共计<span>1111</span>条信息</p>
+                                </div>
+                                <div class="fPage zs-right clear">
+                                    <span class="zs-left"><</span>
+                                    <ul class="zs-left">
+                                        <li class="selec">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                    <span class="zs-left">></span>
+                                    <span>
+                                        <select name="">
+                                            <option value="">10条/页</option>
+                                            <option value="">20条/页</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <span>跳</span>
+                                        <span><input type="text" placeholder="2" name="childPage"></span>
+                                        <span>页</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="listxx" style="display:none">
+                            <div class="pageOnOff clear">
+                                <p class="zs-left">前一篇: 走进沙漠</p>
+                                <p class="zs-right">后一篇: 国家林业局关于</p>
+                            </div>
+                            <div class="xxList">
+                                
+                            </div>
+                        </div>
+                        <div class="tableList">
+                            <div class="searchBox">
+                                <input type="text" name="sea" value="" placeholder="请输入标题进行模糊查询">
+                                <span class="seach-btn btn">查询</span>
+                                <span class="seach-fh btn">返回</span>
+                            </div>
+                            <div class="talbeBox">
+                                <table width="100%" class="table-talbe">
+                                    <tbody>
+                                         <tr>
+                                            <td class="zq-left">内蒙古大兴安岭林区权利支援吉林长火灾扑救纪实,5月17日,呼伦贝尔市陈巴尔虎扯呢吉林长发生森林火灾，火灾过滤面积约为8400公顷</td>
+                                            <td class="zq-right">[发布时间 : 2017 年 10 月 23 日]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pageY clear">
+                                <div class="pageN zs-left">
+                                    <p>共计<span>1111</span>条信息</p>
+                                </div>
+                                <div class="fPage zs-right clear">
+                                    <span class="zs-left"><</span>
+                                    <ul class="zs-left">
+                                        <li class="selec">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                    <span class="zs-left">></span>
+                                    <span>
+                                        <select name="">
+                                            <option value="">10条/页</option>
+                                            <option value="">20条/页</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <span>跳</span>
+                                        <span><input type="text" placeholder="2" name="childPage"></span>
+                                        <span>页</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="listxx" style="display:none">
+                            <div class="pageOnOff clear">
+                                <p class="zs-left">前一篇: 走进沙漠</p>
+                                <p class="zs-right">后一篇: 国家林业局关于</p>
+                            </div>
+                            <div class="xxList">
+                                
+                            </div>
+                        </div>
+                        <div class="tableList">
+                            <div class="searchBox">
+                                <input type="text" name="sea" value="" placeholder="请输入标题进行模糊查询">
+                                <span class="seach-btn btn">查询</span>
+                                <span class="seach-fh btn">返回</span>
+                            </div>
+                            <div class="talbeBox">
+                                <table width="100%" class="table-talbe">
+                                    <tbody>
+                                         <tr>
+                                            <td class="zq-left">内蒙古大兴安岭林区权利支援吉林长火灾扑救纪实,5月17日,呼伦贝尔市陈巴尔虎扯呢吉林长发生森林火灾，火灾过滤面积约为8400公顷</td>
+                                            <td class="zq-right">[发布时间 : 2017 年 10 月 23 日]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pageY clear">
+                                <div class="pageN zs-left">
+                                    <p>共计<span>1111</span>条信息</p>
+                                </div>
+                                <div class="fPage zs-right clear">
+                                    <span class="zs-left"><</span>
+                                    <ul class="zs-left">
+                                        <li class="selec">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                    <span class="zs-left">></span>
+                                    <span>
+                                        <select name="">
+                                            <option value="">10条/页</option>
+                                            <option value="">20条/页</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <span>跳</span>
+                                        <span><input type="text" placeholder="2" name="childPage"></span>
+                                        <span>页</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="listxx" style="display:none">
+                            <div class="pageOnOff clear">
+                                <p class="zs-left">前一篇: 走进沙漠</p>
+                                <p class="zs-right">后一篇: 国家林业局关于</p>
+                            </div>
+                            <div class="xxList">
+                                
+                            </div>
+                        </div>
+                        <div class="tableList">
+                            <div class="searchBox">
+                                <input type="text" name="sea" value="" placeholder="请输入标题进行模糊查询">
+                                <span class="seach-btn btn">查询</span>
+                                <span class="seach-fh btn">返回</span>
+                            </div>
+                            <div class="talbeBox">
+                                <table width="100%" class="table-talbe">
+                                    <tbody>
+                                         <tr>
+                                            <td class="zq-left">内蒙古大兴安岭林区权利支援吉林长火灾扑救纪实,5月17日,呼伦贝尔市陈巴尔虎扯呢吉林长发生森林火灾，火灾过滤面积约为8400公顷</td>
+                                            <td class="zq-right">[发布时间 : 2017 年 10 月 23 日]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pageY clear">
+                                <div class="pageN zs-left">
+                                    <p>共计<span>1111</span>条信息</p>
+                                </div>
+                                <div class="fPage zs-right clear">
+                                    <span class="zs-left"><</span>
+                                    <ul class="zs-left">
+                                        <li class="selec">1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                    </ul>
+                                    <span class="zs-left">></span>
+                                    <span>
+                                        <select name="">
+                                            <option value="">10条/页</option>
+                                            <option value="">20条/页</option>
+                                        </select>
+                                    </span>
+                                    <span>
+                                        <span>跳</span>
+                                        <span><input type="text" placeholder="2" name="childPage"></span>
+                                        <span>页</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

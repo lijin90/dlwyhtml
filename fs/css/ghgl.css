@@ -1,0 +1,350 @@
+#tjfx1 li{
+    float: left;
+    height: 25px;
+    border: 1px solid #b89052;
+    line-height: 25px;
+    width: 135px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.zs-left-main{
+    padding:10px 5px;
+    background-color: #f2f2f2;
+}
+.zs-tree-list{
+    height: 100%;
+    background-color: #eee;
+    border:1px solid #ddd;
+}
+.zs-tree-list .list-header{
+    height: 28px;
+    line-height: 28px;
+    background-color: #fbfbfb;
+    border-bottom:1px solid #ddd;
+}
+.list-icon{
+    display: inline-block;
+    width: 20px;
+    height: 28px;
+    cursor: pointer;
+    background: url(../images/list-down_03.png) no-repeat center center;
+}
+.list-header .list-header-cont{
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    background-color: #b79052;
+    color: #fff;
+}
+/* 搜索 */
+.zs-tree-search{
+    padding: 15px 15px 0 15px;
+}
+input[name='search-name']{
+    width: 215px;
+    height: 25px;
+    float: left;
+    padding: 5px;
+    font-size: 12px
+}
+.serach-btn{
+    width: 70px;
+    display: inline-block;
+    height: 25px;
+    background-color: #b79052;
+    float: right;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+.zs-tree-list .tree-list{
+    height: calc(100% - 90px);
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+
+/* 右侧 */
+.map-box1{
+    height: 100%;
+}
+.fun-btn1 ul{
+    height: 40px;
+    float: right;
+}
+.fun-btn1 ul li{
+    float: left;
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #ddd;
+    margin: 7px 10px 0 0;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0px 30px;
+    text-align: center; 
+}
+.fun-btn1{
+    width: 100%;
+    height: 40px;
+    background-color: #f2f2f2;
+}
+.fun-btn2-active{
+    color: #fff;
+    background-color: #b79052 !important;
+}
+.zs-main-right .map1{
+    width: 100%;
+    height: calc(100% - 40px);
+    display: none;
+    position: relative;
+    /* background: url(../images/sjfx_03.png) no-repeat;
+    background-size: cover; */
+}
+.zs-tree-list ul{
+    padding:20px;
+    background-color: #fff; 
+}
+.zs-tree-list .clears li{
+    float: left;
+    height: 25px;
+    border: 1px solid #b89052;
+    line-height: 25px;
+    width: 135px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.zs-tree-list ul li.active{
+    color:#fff;
+    background-color: #b79152;
+}
+.div-btn{
+    height: 40px;
+    line-height: 40px;
+}
+.div-btn .zs-left span{
+    display: inline-block;
+    border: 1px solid #eee;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 8px;
+    margin-left: 5px;
+}
+.div-btn .zs-right span{
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    width: 70px;
+        text-align: center;
+    border: 1px solid #ddd;
+}
+.div-btn .zs-right select{
+    height: 25px;
+    width: 90px;
+    cursor: pointer
+}
+.btnss{
+    border: 1px solid #ddd;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+.list-hu ul{
+   float: left;
+   width: 800px;
+}
+.list-hu ul li{
+    float: left;
+    padding: 0 5px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+.aclist{
+    font-weight: bold;
+    border-bottom:2px solid #3dbe40 !important;
+} 
+.lr{
+    display: inline-block;
+    float: left;
+    width: 46px;
+    height: 25px;
+    background: url(../images/lr_03.png) no-repeat center;
+}
+.map-div1,.map-div2,.map-div3,.map-div4,.map-div5{
+    height: 100%;
+    display: none;
+}
+.tableB{
+    width: 100%;
+    height: calc(100% - 80px);
+    margin-top: 10px;
+}
+.one-three{
+    background: url(../images/icon-1-3.png) no-repeat center center;
+    background-size: contain;
+}
+
+.ulShow{
+    display: none;
+}
+.tj_table{
+    display: none;
+    height: 100%;
+}
+.bootTabs th,tr,td{
+    border: 1px solid #eee !important;
+    text-align: center;
+}
+/* 分页 */
+.pageY{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    padding: 20px 0;
+}
+.pageN{
+    width: 200px;
+    text-align: center;
+    float: left;
+}
+.fPage{
+    width: 350px;
+}
+.fPage ul li{
+    float: left;
+    width: 15px;
+    margin-left: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.fPage ul li.selec{
+    background-color: #b89052;
+    color: #fff;
+}
+.fPage span{
+    display: inline-block;
+    margin-left: 5px;
+}
+input[name='childPage']{
+    width: 40px;
+    text-align: center;
+}
+
+.tableList,.listxx{
+    height: 100%;
+}
+
+
+.pageOnOff{
+    height: 50px;
+    width: 100%;
+    padding: 12px;
+}
+.pageOnOff p{
+    border:1px solid #eee;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 20px;
+    cursor: pointer;
+     overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.map-btn ul li{
+    float: left;
+    border: 1px solid #eee;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 6px;
+    padding: 0 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.map1 .table{
+    width: 100%;
+    height: calc(100% - 40px);
+    margin-bottom: 0 !important;
+}
+.btn-activeLi{
+    background-color: #b89146;
+    color: #fff;
+}
+.show-map {
+    width: 100%;
+    height: calc(100% - 40px);
+    display: none;
+    background: url(../images/map-tdt.png) no-repeat;
+    background-size: 100%
+}
+#tjsz{
+    cursor: pointer;
+}
+/* bootable */
+.bootstrap-table{
+    height: 100%;
+}
+.bootstrap-table th,tr,td{
+    border:none !important;
+}
+.fixed-table-body{
+    border:none;
+    border-top:1px solid #b79052;
+    border-bottom:1px solid #b79052;
+}
+.table-hover thead>tr{
+    border:none !important;
+    background-color: #fbf8f3  !important;
+} 
+.fixed-table-header{
+    background-color: #f5f4f0 !important;
+}
+.fixed-table-container{
+    height:calc(100% - 75px) !important;
+}
+.bs-checkbox{
+    vertical-align: middle !important;
+}
+.fixed-table-container input[type="radio"], .fixed-table-container input[type="checkbox"]{
+    margin:4px 0 0 !important;
+}
+.bootTab tr:nth-child(1n+1){
+    background-color: #fff;
+}
+ .bootTab tr:nth-child(2n+2){
+    background-color: #f6f6f6;
+}
+.bootTab tr:nth-child(3n+3){
+    background-color: #fff;
+}
+.bootTab tr:nth-child(6n+6){
+    background-color: #f6f6f6;
+}
+.bootTab tr:nth-child(4n+4){
+    background-color: #faf7f2;
+}
+.tbjh,.ndrw,.tbjh,.ndjc,.jhzjgl,.zjbfgl,.zjdwgl,.wgwjdj,.zjbftjfx,.zjbftjfx,.wgwjtjfx,.jdjc,.cgck,.tjfxTab,.ghsb{
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: auto;
+}
+.tbjh th,.ndrw th,.tbjh th,.ndjc th,.jhzjgl th,.zjbfgl th,.zjdwgl th,.wgwjdj th,.zjbftjfx th,.wgwjtjfx th,.jdjc th,.cgck th,.tjfxTab th,.ghsb th{
+   border: 1px solid #987129;
+    text-align: center;
+    background-color: #ad8d34;
+    height: 25px;
+    color: #fff;
+}
+.tbjh td,.ndrw td,.ndjc td,.jhzjgl td,.zjbfgl td,.zjdwgl td,.wgwjdj td,.zjbftjfx td,.wgwjtjfx td,.jdjc td,.cgck td,.tjfxTab td,.ghsb td{
+    border: 1px solid #ddd !important;
+    text-align: center;
+    height: 25px; 
+} 

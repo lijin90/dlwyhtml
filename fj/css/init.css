@@ -1,0 +1,299 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing:border-box;
+}
+body,html{
+	width:100%;
+	height:100%;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, 
+dl, dt, dd, ul, ol, li,
+pre, 
+form, fieldset, legend, button, input, textarea, 
+th, td {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+body, button, input, select, textarea {
+	font: 12px 'Microsoft YaHei', tahoma, arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: 0.02em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+	font-style: normal;
+}
+
+code, kbd, pre, samp {
+	font-family: courier new, courier, monospace;
+}
+
+small {
+	font-size: 12px;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #ff6600
+}
+
+legend {
+	color: #000;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+button, input, select, textarea {
+	font-size: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clear:after {
+	content: '\20';
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.clear{
+	zoom: 1;
+}
+
+img {
+	border: 0px;
+}
+
+.zs-left {
+	float: left;
+}
+
+.zs-right {
+	float: right;
+}
+
+
+/* 容器 */
+.zs-container{
+	width:100%;
+	height:100%;
+}
+/* 头部公用 */
+.zs-header{
+	position: relative;
+	width:100%;
+	height: 70px;
+	background: url(../images/header-bg2.png) no-repeat;
+	background-size: cover;
+}
+.zs-header .choice-zq{
+	float: left;
+	width: 620px;
+	height: 70px;
+	background: url(../images/header_bg_title.png) no-repeat;
+}
+.choice-zq .chioce-zq-content{
+	float: right;
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+.chioce-zq-content .zq-chioce{
+	display: inline-block;
+	padding-left: 15px;
+}
+.chioce-zq-content .chioce-i{
+	position: absolute;
+    right: 6px;
+    top: 5px;
+	display: inline-block;
+    width: 15px;
+    height: 20px;
+    background: url(../images/Resources12_03.png) no-repeat center center;
+}
+.chioce_activ{
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg);
+}
+.chioce-user{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width:352px;
+	height: 32px;
+	background: url(../images/choice-user_03.png) no-repeat center center;
+}
+.chioce-user ul li span{
+	display: inline-block;
+}
+.chioce-user .users,.updataPwd,.cancellation,.helps{
+	position: absolute;
+	top: 9px;
+	width: 18px;
+	height: 15px;
+}
+.chioce-user ul li{
+	position: relative;
+	float: left;
+    height: 32px;
+    color: #fff;
+    line-height: 32px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.li-cont{
+	padding-left: 20px;
+}
+.users{
+	background: url(../images/user.png) no-repeat center center;
+}
+.updataPwd{
+	background: url(../images/Setup.png) no-repeat center center;
+}
+.cancellation{
+	background: url(../images/Cancellation.png) no-repeat center center;
+}
+.helps{
+	background: url(../images/help.png) no-repeat center center;
+}
+
+/* 导航 */
+.zs-nav-list{
+	width: 100%;
+	height: 32px;
+	background-color: #6d480e;
+}
+.zs-nav-list ul li{
+	float: left;
+   /*  width: 90px;
+   height: 32px;
+   line-height: 32px;
+   text-align: center;
+      
+   cursor: pointer; */
+}
+.zs-nav-list ul li a{
+	display: inline-block;
+	color: #fff;
+	width: 90px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+.active-nav{
+	border-radius: 20px;
+    background-color: #f39800;
+}
+/* 主体部分 */
+.zs-main{
+	height:calc(100% - 102px);
+}
+.zs-main-left{
+	width: 350px;
+	height: 100%;
+}
+.zs-main-right{
+	width: calc(100% - 350px);
+	height: 100%;
+}
+
+.zs-left-header{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #f2f2f2;
+	padding-left: 20px;
+}
+.zs-left-header span{
+	display: inline-block;
+}
+.zs-left-header .zs-left-header-home{
+	width: 15px;
+	height: 18px;
+	vertical-align: middle;
+    margin-top: 3px;
+	background: url(../images/home_03.png) no-repeat;
+}
+.zs-left-header .nowPosition{
+	padding-left: 5px;
+}
+.zs-left-main{
+	width: 100%;
+    height: calc(100% - 40px);
+    border:1px solid #ddd;
+}
+.newPosition{
+	padding-left: 5px;
+}
+
+/* 政区list */
+.zqList{
+	width: 415px;
+    height: 270px;
+    position: absolute;
+    top: 35px;
+    background-color: #fff;
+    padding: 15px 0 0 10px;
+    display: none;
+    z-index: 10;
+}
+.zqList ul li{
+	float: left;
+    height: 25px;
+    line-height: 25px;
+    margin: 5px 7px;
+    padding: 0 5px;
+}
+.thisZq{
+	padding-left: 5px;
+}
+.zqList-li{
+	background-color:#b79052;
+	color:#fff;
+}
+
+
+/* bootable 隐藏分页多少条 */
+.pull-left{
+	display: none !important;
+}
+.pull-right{
+	display: block !important;
+}

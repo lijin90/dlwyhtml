@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>沙化土地封禁保护区建设管理子系统</title>
+
+<link rel="stylesheet" href="css/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="css/demo.css" type="text/css">
+
+<link rel="stylesheet" type="text/css" href="css/init.css">
+<link rel="stylesheet" href="css/analysis.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/analysis.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+<body>
+    <div class="zs-container">
+        <div class="zs-header clear">
+            <div class="choice-zq clear">
+				<div class="chioce-zq-content">
+					<span class="zq-chioce">选择政区</span>
+            		<span class="chioce-i"></span> 
+                    <div class="zqList">
+                        <p>直辖市、省(自治区) :<span class="thisZq"></span></p>
+                        <ul id="zqList">
+                            
+                        </ul>
+                    </div>
+				</div>
+            </div>
+            <div class="chioce-user">
+            	<ul class="clear">
+            		<li>
+            			<span class="users"></span>
+            			<span class="li-cont">用户名字</span>
+            		</li>
+            		<li>
+            			<span class="updataPwd"></span>
+            			<span class="li-cont">修改密码</span>
+            		</li>
+            		<li>
+            			<span class="cancellation"></span>
+            			<span class="li-cont">注销登录</span>
+            		</li>
+            		<li>
+            			<span class="helps"></span>
+            			<span class="li-cont">技术支持</span>
+            		</li>
+            	</ul>
+            </div>
+        </div>
+        <div class="zs-nav-list">
+        	<ul class="clear">
+        		<li><a href="../home/mh.html">首页</a></li>
+                <li><a href="dataIntegration.html">数据整合</a></li>
+                <li><a href="integrated.html">综合管理</a></li>
+                <li><a href="patrol.html">巡护管理</a></li>
+                <li class="active-nav"><a href="analysis.html">数据分析</a></li>
+                <li><a href="propaganda.html">宣传教育</a></li>
+        	</ul>
+        </div>
+        <div class="zs-main clear">
+            <div class="zs-main-left zs-left">
+                <div class="zs-left-header">
+                    <span class="zs-left-header-home"></span>
+                    <span class="nowPosition">您现在的位置:</span>
+                    <span class="newPosition">首页-<i style="font-style: normal">数据分析</i></span>
+                </div>
+                <div class="zs-left-main">
+                    <div class="zs-tree-list">
+                        
+                        <div class="list-header clear">
+                            <span class="list-header-cont zs-left">数据分析</span>
+                            <span class="list-icon zs-right"></span>
+                        </div>
+                        <ul class="clear ljcheck">
+                            <!--<li>缓冲区分析</li>-->
+                            <li class="ljActive">统计分析</li>
+                            <li>设施影响分析</li>
+                            <li>空间分析</li>
+                            <li>治理成效分析</li>
+                        </ul>
+                        <!-- <div class="zs-tree-search clear">
+                            <input type="text" name="search-name" placeholder="请输入搜索内容">
+                            <span class="serach-btn">搜索</span>
+                        </div>
+                        <div id="tree-list" class="tree-list ztree">
+                            树
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="zs-main-right zs-left">
+                <div class="map-box1">
+                    <div class="fun-btn1 clear">
+                        <ul class="clear">
+                            <!--<li class="fun-btn2-active">统计分析</li>-->
+                            <!--<li>设施影响分析</li>-->
+                            <!--<li>空间分析</li>-->
+                            <!--<li>治理成效分析</li>-->
+                        </ul>
+                    </div>
+                    <div class="map1" id="map1" style="display:block">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan='2'>工程项目</th>
+                                    <th rowspan='2'>年度</th>
+                                    <th rowspan='2'>单位</th>
+                                    <th colspan="5">资金投入情况(万元)</th>
+                                </tr>
+                                <tr>
+                                    <th>合计</th>
+                                    <th>上级政府投资</th>
+                                    <th>地方配套</th>
+                                    <th>建设单位自筹</th>
+                                    <th>社会投入</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="17">总计</td>
+                                    <td rowspan="8">合计</td>
+                                    <td>合计</td>
+                                    <td>2595.00</td>
+                                    <td>1111.00</td>
+                                    <td>617.00</td>
+                                    <td>570.00</td>
+                                    <td>297.00</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>江岸区</td>
+                                    <td>330.00</td>
+                                    <td>66.00</td>
+                                    <td>77.00</td>
+                                    <td>88.00</td>
+                                    <td>99.00</td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>江汉区</td>
+                                    <td>300.00</td>
+                                    <td>215.00</td>
+                                    <td>458.00</td>
+                                    <td>55.00</td>
+                                    <td>66.00</td>
+                                </tr>
+                                <tr>
+                                    <td>汉阳区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>青山区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>汉南区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>江夏区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>黄陂区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="5">2017</td>
+                                    <td>合计</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>江岸区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>江汉区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>汉南区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>黄陂区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">2016</td>
+                                    <td>合计</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>江汉区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">2015</td>
+                                    <td>合计</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                                <tr>
+                                    <td>青山区</td>
+                                    <td>335.00</td>
+                                    <td>336.00</td>
+                                    <td>850.00</td>
+                                    <td>458.00</td>
+                                    <td>858.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     <div class="map1">
+                        设施影响分析
+                    </div>
+                    <div class="map1">
+                         空间分析
+                    </div>
+                    <div class="map1">
+                        治理成效分析
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

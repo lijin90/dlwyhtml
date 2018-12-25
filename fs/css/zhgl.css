@@ -1,0 +1,179 @@
+.zs-left-main{
+    padding:10px 5px;
+    background-color: #f2f2f2;
+}
+.zs-tree-list{
+    height: 100%;
+    background-color: #fff;
+    border:1px solid #ddd;
+}
+.zs-tree-list .list-header{
+    height: 28px;
+    line-height: 28px;
+    background-color: #fbfbfb;
+    border-bottom:1px solid #ddd;
+}
+.list-icon{
+    display: inline-block;
+    width: 20px;
+    height: 28px;
+    cursor: pointer;
+    background: url(../images/list-down_03.png) no-repeat center center;
+}
+.list-header .list-header-cont{
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    background-color: #b79052;
+    color: #fff;
+}
+/* 搜索 */
+.zs-tree-search{
+    padding: 15px 15px 0 15px;
+}
+input[name='search-name']{
+    width: 215px;
+    height: 25px;
+    float: left;
+    padding: 5px;
+    font-size: 12px
+}
+.serach-btn{
+    width: 70px;
+    display: inline-block;
+    height: 25px;
+    background-color: #b79052;
+    float: right;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+.zs-tree-list .tree-list{
+    height: calc(100% - 90px);
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+
+/* 右侧 */
+.map-box1{
+    height: 100%;
+}
+.fun-btn1 ul{
+    height: 40px;
+    float: right;
+}
+.fun-btn1 ul li{
+    float: left;
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #ddd;
+    margin: 7px 10px 0 0;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0px 30px;
+    text-align: center; 
+}
+.fun-btn1{
+    width: 100%;
+    height: 40px;
+    background-color: #f2f2f2;
+}
+.fun-btn2-active{
+    color: #fff;
+    background-color: #b79052 !important;
+}
+.zs-main-right .map1{
+    width: 100%;
+    height: calc(100% - 40px);
+    display: none;
+    /* background: url(../images/sjfx_03.png) no-repeat;
+    background-size: cover; */
+}
+
+
+
+/* 具体内容 */
+.map-btn{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+.search-pro{
+    width: 150px;
+    border: 1px solid #ddd;
+    height: 25px;
+}
+.map-btn ul li{
+    float: left;
+    border: 1px solid #eee;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 6px;
+    padding: 0 15px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.map1 .table{
+    width: 100%;
+    height: calc(100% - 40px);
+    margin-bottom: 0 !important;
+}
+.btn-activeLi{
+    background-color: #b89146;
+    color: #fff;
+}
+.show-map {
+    width: 100%;
+    height: calc(100% - 40px);
+    display: none;
+    background: url(../images/map-tdt.png) no-repeat;
+    background-size: 100%
+}
+
+
+/* bootable */
+.bootstrap-table{
+    height: 100%;
+}
+.bootstrap-table th,tr,td{
+    border:none !important;
+}
+.fixed-table-body{
+    border:none;
+    border-top:1px solid #b79052;
+    border-bottom:1px solid #b79052;
+}
+.table-hover thead>tr{
+    border:none !important;
+    background-color: #fbf8f3  !important;
+} 
+.fixed-table-header{
+    background-color: #f5f4f0 !important;
+}
+.fixed-table-container{
+    height:calc(100% - 75px) !important;
+}
+.bs-checkbox{
+    vertical-align: middle !important;
+}
+.fixed-table-container input[type="radio"], .fixed-table-container input[type="checkbox"]{
+    margin:4px 0 0 !important;
+}
+.bootTab tr:nth-child(1n+1){
+    background-color: #fff;
+}
+ .bootTab tr:nth-child(2n+2){
+    background-color: #f6f6f6;
+}
+.bootTab tr:nth-child(3n+3){
+    background-color: #fff;
+}
+.bootTab tr:nth-child(6n+6){
+    background-color: #f6f6f6;
+}
+.bootTab tr:nth-child(4n+4){
+    background-color: #faf7f2;
+}

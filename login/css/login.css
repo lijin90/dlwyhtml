@@ -1,0 +1,96 @@
+.zs-container{
+    background: url(../images/login.jpg) center center no-repeat;
+    position: relative;
+    min-width: 100%;
+}
+.zs-container .login{
+    height:300px ;
+    width: 340px;
+    padding: 30px 30px;
+    position: absolute;
+    right:15%;
+    bottom: 20%;
+    background: #fff;
+    box-shadow: 0px 0px 5px #9b9b9b;
+    border-radius: 2px;
+}
+.zs-container .login ul.select{
+    border-bottom: 1px solid #EEEEEE;
+}
+.zs-container .login ul.select li{
+    float: left;
+    font-size: 18px;
+    padding: 0px 10px 15px;
+    color: #999999;
+    border-bottom: 1px solid #EEEEEE;
+    cursor:pointer;
+
+}
+.zs-container .login ul.select li.current{
+    color: #282828;
+    border-bottom: 1px solid #282828;
+}
+.zs-container .login .shuru .item{
+    margin-bottom: 20px;
+}
+.zs-container .login .shuru{
+    margin-top: 30px;
+}
+.zs-container .login .shuru .item input{
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    height:40px;
+    line-height: 40px;
+    /*color: #999999;*/
+}
+.zs-container .login .shuru .item .error{
+    border-color:#EF5B00;
+}
+
+.zs-container .login .shuru .ipt input{
+    width: 306px;
+    padding: 0px 17px 0px 15px;
+    border: 1px solid #DDDDDD;
+    background: #F4F4F4;
+}
+.zs-container .login .shuru input.login-button {
+    background-color: #B89052;
+    width: 100%;
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.zs-container .login .shuru .item .getSMSCode{
+    display: inline-block;
+    line-height: 42px;
+    height: 42px;
+    width: 120px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0px 2px 0px 2px;
+}
+.zs-container .login .shuru .checkbox input{
+    vertical-align: middle;
+}
+.zs-container .login .shuru .forget a{
+    color: #999999;
+}
+.zs-container .login .shuru .checkTab{
+    display: none;
+}
+.zs-container .profile{
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+}
+.zs-container .profile a{
+    padding: 0px 15px;
+}

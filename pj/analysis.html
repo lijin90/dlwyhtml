@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>沙尘暴灾害评估子系统</title>
+
+    <link rel="stylesheet" href="css/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="css/demo.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap-table/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-table/bootstrap-table.css"/>
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+
+    <link rel="stylesheet" href="css/analysis.css">
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+
+    <script src="bootstrap-table/bootstrap.js"></script>
+    <script src="bootstrap-table/bootstrap-table.js"></script>
+
+    <script src="js/analysis.js"></script>
+<body>
+<div class="zs-container">
+    <div class="zs-header clear">
+        <div class="choice-zq clear">
+            <div class="chioce-zq-content">
+                <span class="zq-chioce">选择政区</span>
+                <span class="chioce-i"></span>
+                <div class="zqList">
+                    <p>直辖市、省(自治区) :<span class="thisZq"></span></p>
+                    <ul id="zqList">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chioce-user">
+            <ul class="clear">
+                <li>
+                    <span class="users"></span>
+                    <span class="li-cont">用户名字</span>
+                </li>
+                <li>
+                    <span class="updataPwd"></span>
+                    <span class="li-cont">修改密码</span>
+                </li>
+                <li>
+                    <span class="cancellation"></span>
+                    <span class="li-cont">注销登录</span>
+                </li>
+                <li>
+                    <span class="helps"></span>
+                    <span class="li-cont">技术支持</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="zs-nav-list">
+        <ul class="clear">
+                <li><a href="../home/mh.html">首页</a></li>
+            <li><a href="dataIntegration.html">数据整合</a></li>
+            <li class="active-nav"><a href="analysis.html">综合分析</a></li>
+            <li><a href="informationService.html">评价管理</a></li>
+        </ul>
+    </div>
+    <div class="zs-main clear">
+        <div class="zs-main-left zs-left">
+            <div class="zs-left-header">
+                <span class="zs-left-header-home"></span>
+                <span class="nowPosition">您现在的位置:</span>
+                <span class="newPosition">首页-<i style="font-style: normal">综合分析</i></span>
+            </div>
+            <div class="zs-left-main">
+                <div class="zs-tree-list zs-tree-list-block">
+                    <div class="list-header clear">
+                        <span class="list-header-cont zs-left">综合分析</span>
+                        <span class="list-icon zs-right"></span>
+                    </div>
+                    <div class="zs-tree-search clear zs-checkbox1">
+                        <ul class="clear">
+                            <li class="current">浏览查询</li>
+                            <li>灾害损失评估</li>
+                            <li>模型管理</li>
+                            <li>专题图管理</li>
+                        </ul>
+                    </div>
+                    <div class="zs-tree-searchList hide">
+                        <div class="list-header clear">
+                            <span class="list-header-cont zs-left">数据分析</span>
+                            <span class="list-icon zs-right"></span>
+                        </div>
+                        <div class="zs-tree-search clear zs-checkbox2">
+                            <ul class="clear">
+                                <li>叠加分析</li>
+                                <li class="current">缓冲分析</li>
+                            </ul>
+                        </div>
+
+                        <div class="list-header clear">
+                            <span class="list-header-cont zs-left">叠加分析</span>
+                            <span class="list-icon zs-right"></span>
+                        </div>
+                        <div class="zs-tree-search clear">
+                            <div class="checkInput">
+                                <span>导入GPS：</span>
+                                <input type="text" placeholder="F:\Download">
+                                <button>导入</button>
+                            </div>
+                            <div class="checkInput">
+                                <span>分析图层：</span>
+                                <input type="text" placeholder="资源一张小图">
+                            </div>
+                            <div class="checkInput">
+                                <span>统计类别：</span>
+                                <input type="text" placeholder="地类">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zs-main-right zs-left">
+            <div class="map-box1">
+                <div class="fun-btn1 clear">
+                    <ul class="clear">
+                        <li>
+                            <img src="images/2.png" alt="">
+                            全屏
+                        </li>
+                        <li class="shuju">
+                            <img src="images/3.png" alt="">
+                            清除
+                        </li>
+                        <li class="geshi">
+                            <img src="images/4.png" alt="">
+                            放大
+                        </li>
+                        <li>
+                            <img src="images/5.png" alt="">
+                            缩小
+                        </li>
+                        <li>
+                            <img src="images/6.png" alt="">
+                            平移
+                        </li>
+                        <li>
+                            <img src="images/7.png" alt="">
+                            距离
+                        </li>
+                        <li>
+                            <img src="images/8.png" alt="">
+                            面积
+                        </li>
+                        <li>
+                            <img src="images/9.png" alt="">
+                            i键查询
+                        </li>
+                        <li>
+                            <img src="images/10.png" alt="">
+                            返回
+                        </li>
+                    </ul>
+                </div>
+                <div class="map-box1">
+                    <div class="checkbox show">
+                        <img src="images/map3.png" alt="">
+                    </div>
+                    <div class="checkbox ">
+                        <img src="images/map.png" alt="">
+                    </div>
+                    <div class="checkbox ">
+
+                    </div>
+                    <div class="checkbox ">
+                        <ul class="clear">
+                            <li class="current">灾害危险评估专题图</li>
+                            <li>灾害损失评估专题图</li>
+                            <li>灾害生态环境破坏评估专题图</li>
+                            <li>防灾工程的减灾效益评估专题图</li>
+                        </ul>
+                        <div class="clear">
+                            <img src="images/map2.png" alt="">
+                        </div>
+                    </div>
+                    <!--<div class="map1" id="map1">-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

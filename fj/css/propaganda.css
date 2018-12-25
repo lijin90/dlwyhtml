@@ -1,0 +1,220 @@
+.zs-main{
+    height: 40px;
+}
+.jy-box{
+    width: 100%;
+    height: calc(100% - 142px);
+    background: url(../images/xhdts.png) no-repeat center center;
+    background-size:cover;
+    display: none;
+}
+.zs-left-main{
+	padding:10px 5px;
+	background-color: #f2f2f2;
+}
+.zs-tree-list{
+	height: 100%;
+	background-color: #fff;
+	border:1px solid #ddd;
+}
+.zs-tree-list .list-header{
+	height: 28px;
+	line-height: 28px;
+	background-color: #fbfbfb;
+	border-bottom:1px solid #ddd;
+}
+.list-icon{
+	display: inline-block;
+    width: 20px;
+    height: 28px;
+    cursor: pointer;
+    background: url(../images/list-down_03.png) no-repeat center center;
+}
+.list-header .list-header-cont{
+	width: 100px;
+	height: 28px;
+	text-align: center;
+	background-color: #b79052;
+	color: #fff;
+}
+.zs-tree-list ul{
+	padding: 20px;
+}
+.zs-tree-list ul li{
+	 float: left;
+    height: 25px;
+    border: 1px solid #b89052;
+    line-height: 25px;
+    width: 100px;
+    margin-left: 30px;
+    text-align: center;
+    color: #b89052;
+
+}
+/* 搜索 */
+/* .zs-tree-search{
+	padding: 15px 15px 0 15px;
+}
+input[name='search-name']{
+	width: 215px;
+    height: 25px;
+    float: left;
+    padding: 5px;
+    font-size: 12px
+}
+.serach-btn{
+	width: 70px;
+    display: inline-block;
+    height: 25px;
+    background-color: #b79052;
+    float: right;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+.zs-tree-list .tree-list{
+	height: calc(100% - 90px);
+    margin: 10px 0;
+    padding-left: 30px;
+} */
+
+
+/* 右侧 */
+.map-box1{
+	height: 100%;
+}
+.fun-btn1 ul{
+	height: 40px;
+	float: right;
+}
+.fun-btn1 ul li{
+	float: left;
+    height: 26px;
+    line-height: 24px;
+    border: 1px solid #ddd;
+    margin: 7px 10px 0 0;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0px 30px;
+    text-align: center; 
+}
+.fun-btn1{
+	width: 100%;
+	height: 40px;
+	background-color: #f2f2f2;
+}
+.fun-btn2-active{
+	color: #fff;
+	background-color: #b79052 !important;
+}
+/* 宣传教育 */
+.jy-list ul{
+    height: 40px;
+    border-bottom: 1px solid #b3b1b1;
+}
+.jy-list ul li{
+    float: left;
+    width: 130px;
+    border: 1px solid #b3b1b1;
+    border-bottom: none;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 9px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.li-activ{
+    color: orange;
+}
+.jy-list-cont{
+    width: 100%;
+    height: calc(100% - 40px);
+    display: none;
+}
+.jy-list-cont>ul li{
+    float: left;
+    width: 20%;
+    height: 80px;
+    margin: 35px;
+}
+.list-l{
+   width: 80px;
+   height: 80px;
+   background: url(../images/sex.png) no-repeat;
+   background-size: 100%;
+}
+.list-r{
+    height: 80px;
+    padding-left: 10px;
+}
+.names{
+    font-size: 14px;
+    font-weight: bold;
+}
+.px-l{
+    width: 80px;
+   height: 80px;
+   background: url(../images/px.png) no-repeat;
+   background-size: 100%;
+}
+.px-r{
+       width: 190px;
+    padding-left: 10px;
+}
+.r-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.jy-list-cont .xc-ul li{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    margin: 15px 20px 0 20px;
+    border-bottom:1px solid #ddd;
+}
+.jy-list-cont .xc-ul li span{
+    display: inline-block;
+}
+.xct{
+    padding-right:30px;
+    color: #ddd; 
+}
+.xc-name i{
+    font-weight: bold;
+    color: green;
+    padding-right: 5px
+}
+
+.xcp-btn{
+    width: 100%;
+    height: 40px;
+}
+.xcp-btn ul li{
+    float: left;
+    width: 70px;
+}
+.xcp-table{
+    width: 100%;
+    height: calc(100% - 40px)
+}
+.xcp-btn ul{
+    height: 40px;
+}
+.xcp-btn ul li{
+   float: left;
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #eee;
+    margin: 6px 0 0 5px;
+}
+/* boot */
+.bootstrap-table{
+    height: 100% !important;
+}
+.fixed-table-container{
+    height: calc(100% - 80px) !important;
+}

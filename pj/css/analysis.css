@@ -1,0 +1,263 @@
+.zs-left-main{
+	padding:10px 5px;
+	background-color: #f2f2f2;
+}
+.zs-tree-list{
+	height: 100%;
+	background-color: #fff;
+	border:1px solid #ddd;
+}
+.zs-tree-list .list-header{
+	height: 28px;
+	line-height: 28px;
+	background-color: #fbfbfb;
+	border-bottom:1px solid #ddd;
+}
+.list-icon{
+	display: inline-block;
+    width: 20px;
+    height: 28px;
+    cursor: pointer;
+    background: url(../images/list-down_03.png) no-repeat center center;
+}
+.list-header .list-header-cont{
+	width: 100px;
+	height: 28px;
+	text-align: center;
+	background-color: #b79052;
+	color: #fff;
+}
+/* 搜索 */
+.zs-tree-search{
+	padding: 15px 15px 0 15px;
+}
+input[name='search-name']{
+	width: 215px;
+    height: 25px;
+    float: left;
+    padding: 5px;
+    font-size: 12px
+}
+.serach-btn{
+	width: 70px;
+    display: inline-block;
+    height: 25px;
+    background-color: #b79052;
+    float: right;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+.zs-tree-list .tree-list{
+	height: calc(100% - 90px);
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+
+/* 右侧 */
+.map-box1{
+	height: 100%;
+}
+.fun-btn1 ul{
+	height: 40px;
+	float: right;
+}
+.fun-btn1 ul li{
+	float: left;
+    height: 26px;
+    line-height: 24px;
+    /*border: 1px solid #ddd;*/
+    margin: 7px 10px 0 0;
+    cursor: pointer;
+    /*background-color: #fff;*/
+    padding: 0px 10px;
+    text-align: center; 
+}
+.fun-btn1{
+	width: 100%;
+	height: 40px;
+	background-color: #f2f2f2;
+}
+.fun-btn2-active{
+	color: #fff;
+	background-color: #b79052 !important;
+}
+
+
+
+.zs-tree-search ul li {
+	float: left;
+	width: 140px;
+	height: 26px;
+	line-height: 24px;
+	border: 1px solid #ddd;
+	margin: 7px 10px 0 0;
+	cursor: pointer;
+	background-color: #fff;
+	/*padding: 0px 30px;*/
+	text-align: center;
+}
+.zs-tree-search ul{
+	margin-bottom: 20px;
+}
+.zs-tree-search ul li.current{
+	background: #b79052;
+	color: #fff;
+}
+
+/*  */
+.zs-tree-list-block{
+	display: block;
+}
+
+
+/* 菜单 */
+.search-tj{
+	height: 46px;
+	/*text-align: right;*/
+}
+.search-tj span{
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 10px;
+	text-align: left;
+	width:80px;
+	border: 1px solid #ddd;
+	margin: 8px 15px 0 0;
+	cursor: pointer;
+	position: relative;
+}
+.search-tj span i{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(../images/down_03.png) no-repeat;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+.span-i-icon{
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg);
+	top:1px !important;
+	right: 10px !important;
+
+}
+/* 条件过滤 */
+.search-tj-content{
+	display: none;
+}
+.YearCont{
+	width: 90px;
+	height: 200px;
+	border: 1px solid #ddd;
+	position: absolute;
+	/*right: 272px;*/
+	top: 40px;
+	z-index: 15;
+	background-color: #fff;
+}
+.ZqCont{
+	width: 90px;
+	height: 200px;
+	border: 1px solid #ddd;
+	position: absolute;
+	left: 114px;
+	top: 40px;
+	z-index: 15;
+	background-color: #fff;
+}
+.ZttmcCont{
+	width: 115px;
+	height: 200px;
+	border: 1px solid #ddd;
+	position: absolute;
+	left: 214px;
+	top: 40px;
+	z-index: 15;
+	background-color: #fff;
+}
+.DateCont{
+	width: 115px;
+	height: 200px;
+	border: 1px solid #ddd;
+	position: absolute;
+	left: 346px;
+	top: 40px;
+	z-index: 15;
+	background-color: #fff;
+}
+.search-tj .Zttmc{
+	width: 115px;
+}
+.ztree li a.curSelectedNode{
+	color: orange;
+}
+#map1{
+	width:100%;
+	height: calc(100% - 40px);
+	background-size: cover;
+
+}
+.zs-main-right .checkbox{
+	display: none;
+}
+.zs-main-right .checkbox img {
+	max-width: 100%;
+}
+.zs-main-right .checkbox ul{
+	height: 32px;
+	margin-top: 15px;
+}
+.zs-main-right .checkbox ul li{
+	float: left;
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #ddd;
+	margin: 0px 10px 0 0;
+	cursor: pointer;
+	background-color: #fff;
+	padding: 0px 10px;
+	text-align: center;
+}
+.zs-main-right .checkbox ul li.current {
+	background: #b79052;
+	color: #fff;
+}
+.checkInput{
+    padding: 10px 0px;
+}
+.checkInput span{
+    display: inline-block;
+    width: 20%;
+}
+.checkInput:nth-of-type(1) input{
+    width: 53%;
+}
+.checkInput input{
+    outline: none;
+    height: 26px;
+    width: 70%;
+}
+.checkInput button{
+    outline: none;
+    padding: 3px 10px;
+}
+/*.zs-main-right .map1{*/
+	/*background: url(../images/sc1.png) no-repeat;*/
+/*}*/
+/*.zs-main-right .map2{*/
+	/*background: url(../images/sc2.png) no-repeat;*/
+/*}*/
+/*.zs-main-right .map3{*/
+	/*background: url(../images/sc3.png) no-repeat;*/
+/*}*/
+/*.zs-main-right .map4{*/
+	/*background: url(../images/sc4.png) no-repeat;*/
+/*}*/

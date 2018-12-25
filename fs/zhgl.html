@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>防沙治沙综合示范区管理子系统</title>
+
+<link rel="stylesheet" href="css/zTreeStyle.css" type="text/css">
+<link rel="stylesheet" href="css/demo.css" type="text/css">
+<link rel="stylesheet" href="bootstrap-table/bootstrap.css">
+<link rel="stylesheet" href="bootstrap-table/bootstrap-table.css" />
+<link rel="stylesheet" type="text/css" href="css/jump.css">
+
+<link rel="stylesheet" type="text/css" href="css/init.css">
+<link rel="stylesheet" href="css/zhgl.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="bootstrap-table/bootstrap.js"></script>
+<script src="bootstrap-table/bootstrap-table.js"></script>
+<script src="js/jump.js"></script>
+<script src="js/zhgl.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+<body>
+    <div class="zs-container">
+        <div class="zs-header clear">
+            <div class="choice-zq clear">
+                <div class="chioce-zq-content">
+                    <span class="zq-chioce">选择政区</span>
+                    <span class="chioce-i"></span> 
+                    <div class="zqList">
+                        <p>直辖市、省(自治区) :<span class="thisZq"></span></p>
+                        <ul id="zqList">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="chioce-user">
+                <ul class="clear">
+                    <li>
+                        <span class="users"></span>
+                        <span class="li-cont">用户名字</span>
+                    </li>
+                    <li>
+                        <span class="updataPwd"></span>
+                        <span class="li-cont">修改密码</span>
+                    </li>
+                    <li>
+                        <span class="cancellation"></span>
+                        <span class="li-cont">注销登录</span>
+                    </li>
+                    <li>
+                        <span class="helps"></span>
+                        <span class="li-cont">技术支持</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="zs-nav-list">
+            <ul class="clear">
+                <li><a href="../home/mh.html">首页</a></li>
+                <li><a href="ghgl.html">规划管理</a></li>
+                <li><a href="sjfx.html">数据分析</a></li>
+                <li class="active-nav"><a href="zhgl.html">综合管理</a></li>
+                <li><a href="xxfw.html">信息服务</a></li>
+            </ul>
+        </div>
+        <div class="zs-main clear">
+            <div class="zs-main-left zs-left">
+                <div class="zs-left-header">
+                    <span class="zs-left-header-home"></span>
+                    <span class="nowPosition">您现在的位置:</span>
+                    <span class="newPosition">首页-<i style="font-style: normal">综合管理</i></span>
+                </div>
+                <div class="zs-left-main">
+                    <div class="zs-tree-list">
+                        <div class="list-header clear">
+                            <span class="list-header-cont zs-left">数据列表</span>
+                            <span class="list-icon zs-right"></span>
+                        </div>
+                        <div class="zs-tree-search clear">
+                            <input type="text" name="search-name" placeholder="请输入搜索内容">
+                            <span class="serach-btn">搜索</span>
+                        </div>
+                        <div id="tree-list" class="tree-list ztree">
+                            <!-- 树 -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="zs-main-right zs-left">
+                <div class="map-box1">
+                    <div class="fun-btn1 clear">
+                        <ul class="clear">
+                            <li class="fun-btn2-active">综合查询</li>
+                            <li>工程计划管理</li>
+                            <li>工程资金管理</li>
+                            <li>工程进度管理</li>
+                            <li>工程检查验收</li>
+                            <li>报表统计</li>
+                            <li>图表统计</li>
+                        </ul>
+                    </div>
+                    <div class="map1" style="display: block">
+                        <div class="map-btn clear">
+                            <div class="sea-pro zs-left">
+                                <span>项目 :</span>
+                                <select name="search-pro" class="search-pro">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <ul class="zs-right clear">
+                                <li class="btn-activeLi">查询</li>
+                                <li>新增</li>
+                                <li>删除</li>
+                                <li>编辑</li>
+                                <li>查看</li>
+                                <li>定位</li>
+                                <li>图形挂接</li>
+                                <li class="map-show" data-show="map-show">地图</li>
+                            </ul>
+                        </div>
+                        <div class="table" id="table">
+                            <table id="reportTable"  class="bootTab">
+                                
+                            </table>
+                        </div>
+                        <div class="show-map" id="map-show">
+                            
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="map-btn clear">
+                            <div class="sea-pro zs-left">
+                                <span>项目 :</span>
+                                <select name="search-pro" class="search-pro">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <ul class="zs-right clear">
+                                <li class="btn-activeLi">查询</li>
+                                <li>新增</li>
+                                <li>删除</li>
+                                <li>编辑</li>
+                                <li>查看</li>
+                                <li>定位</li>
+                                <li>图形挂接</li>
+                                <li class="map-show" data-show="map-show">地图</li>
+                            </ul>
+                        </div>
+                        <div class="table" id="table">
+                            <table id="reportTable2"  class="bootTab">
+                                
+                            </table>
+                        </div>
+                        <div class="show-map" id="map-show">
+                            
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="map-btn clear">
+                            <div class="sea-pro zs-left">
+                                <span>项目 :</span>
+                                <select name="search-pro" class="search-pro">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <ul class="zs-right clear">
+                                <li class="btn-activeLi">查询</li>
+                                <li>新增</li>
+                                <li>删除</li>
+                                <li>编辑</li>
+                                <li>查看</li>
+                                <li>定位</li>
+                                <li>图形挂接</li>
+                                <li class="map-show" data-show="map-show">地图</li>
+                            </ul>
+                        </div>
+                        <div class="table" id="table">
+                            <table id="reportTable3"  class="bootTab">
+                                
+                            </table>
+                        </div>
+                        <div class="show-map" id="map-show">
+                            
+                        </div>
+                    </div>
+                    <div class="map1">
+                       <div class="map-btn clear">
+                            <div class="sea-pro zs-left">
+                                <span>项目 :</span>
+                                <select name="search-pro" class="search-pro">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <ul class="zs-right clear">
+                                <li class="btn-activeLi">查询</li>
+                                <li>新增</li>
+                                <li>删除</li>
+                                <li>编辑</li>
+                                <li>查看</li>
+                                <li>定位</li>
+                                <li>图形挂接</li>
+                                <li class="map-show" data-show="map-show">地图</li>
+                            </ul>
+                        </div>
+                        <div class="table" id="table">
+                            <table id="reportTable4"  class="bootTab">
+                                
+                            </table>
+                        </div>
+                        <div class="show-map" id="map-show">
+                            
+                        </div>
+                    </div>
+                    <div class="map1">
+                       <div class="map-btn clear">
+                            <div class="sea-pro zs-left">
+                                <span>项目 :</span>
+                                <select name="search-pro" class="search-pro">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <ul class="zs-right clear">
+                                <li class="btn-activeLi">查询</li>
+                                <li>新增</li>
+                                <li>删除</li>
+                                <li>编辑</li>
+                                <li>查看</li>
+                                <li>定位</li>
+                                <li>图形挂接</li>
+                                <li class="map-show" data-show="map-show">地图</li>
+                            </ul>
+                        </div>
+                        <div class="table" id="table">
+                            <table id="reportTable5"  class="bootTab">
+                                
+                            </table>
+                        </div>
+                        <div class="show-map" id="map-show">
+                            
+                        </div>
+                    </div>
+                    <div class="map1">
+                       <div class="map-btn clear">
+                            <div class="sea-pro zs-left">
+                                <span>项目 :</span>
+                                <select name="search-pro" class="search-pro">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <ul class="zs-right clear">
+                                <li class="btn-activeLi">查询</li>
+                                <li>新增</li>
+                                <li>删除</li>
+                                <li>编辑</li>
+                                <li>查看</li>
+                                <li>定位</li>
+                                <li>图形挂接</li>
+                                <li class="map-show" data-show="map-show">地图</li>
+                            </ul>
+                        </div>
+                        <div class="table" id="table">
+                            <table id="reportTable6"  class="bootTab">
+                                
+                            </table>
+                        </div>
+                        <div class="show-map" id="map-show">
+                            
+                        </div>
+                    </div>
+                    <div class="map1">
+                        <div class="map-btn clear">
+                            <div class="sea-pro zs-left">
+                                <span>项目 :</span>
+                                <select name="search-pro" class="search-pro">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                            <ul class="zs-right clear">
+                                <li class="btn-activeLi">查询</li>
+                                <li>新增</li>
+                                <li>删除</li>
+                                <li>编辑</li>
+                                <li>查看</li>
+                                <li>定位</li>
+                                <li>图形挂接</li>
+                                <li class="map-show" data-show="map-show">地图</li>
+                            </ul>
+                        </div>
+                        <div class="table" id="table">
+                            <table id="reportTable7"  class="bootTab">
+                                
+                            </table>
+                        </div>
+                        <div class="show-map" id="map-show">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tableData.js"></script>
+</body>
+</html>

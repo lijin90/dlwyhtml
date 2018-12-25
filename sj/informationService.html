@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全国荒漠化沙化监测数据管理子系统</title>
+    <link rel="stylesheet" href="css/zTreeStyle.css" type="text/css">
+    <link rel="stylesheet" href="css/demo.css" type="text/css">
+
+    <link rel="stylesheet" href="bootstrap-table/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-table/bootstrap-table.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/init.css">
+    <link rel="stylesheet" href="css/informationService.css">
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="bootstrap-table/bootstrap.js"></script>
+    <script src="bootstrap-table/bootstrap-table.js"></script>
+
+    <script src="js/informmationService.js"></script>
+
+    <script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+<body>
+<div class="zs-container">
+    <div class="zs-header clear">
+        <div class="choice-zq clear">
+            <div class="chioce-zq-content">
+                <span class="zq-chioce">选择政区</span>
+                <span class="chioce-i"></span>
+                <div class="zqList">
+                    <p>直辖市、省(自治区) :<span class="thisZq"></span></p>
+                    <ul id="zqList">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chioce-user">
+            <ul class="clear">
+                <li>
+                    <span class="users"></span>
+                    <span class="li-cont">用户名字</span>
+                </li>
+                <li>
+                    <span class="updataPwd"></span>
+                    <span class="li-cont">修改密码</span>
+                </li>
+                <li>
+                    <span class="cancellation"></span>
+                    <span class="li-cont">注销登录</span>
+                </li>
+                <li>
+                    <span class="helps"></span>
+                    <span class="li-cont">技术支持</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="zs-nav-list">
+        <ul class="clear">
+                <li><a href="../home/mh.html">首页</a></li>
+            <li><a href="dataIntegration.html">数据整合</a></li>
+            <li><a href="analysis.html">综合分析</a></li>
+            <li class="active-nav"><a href="informationService.html">信息服务</a></li>
+        </ul>
+    </div>
+    <div class="zs-main clear">
+        <div class="zs-main-left zs-left">
+            <div class="zs-left-header">
+                <span class="zs-left-header-home"></span>
+                <span class="nowPosition">您现在的位置:</span>
+                <span class="newPosition">首页-<i style="font-style: normal">信息服务</i></span>
+            </div>
+            <div class="zs-left-main">
+                <div class="zs-tree-list zs-tree-list-block">
+                    <div class="list-header clear">
+                        <span class="list-header-cont zs-left">遥感数据</span>
+                        <span class="list-icon zs-right"></span>
+                    </div>
+                    <div class="zs-tree-search clear">
+                        <input type="text" name="search-name" placeholder="请输入搜索内容">
+                        <span class="serach-btn">搜索</span>
+                    </div>
+                    <div class="tiqu">
+                        <div class="tqNmae">
+                            <span>名称</span>
+                            <span>路径</span>
+                        </div>
+                        <ul class="clear tqList">
+                            <li>
+                                <span>2018年北京遥感</span>
+                                <span>E:\data\2012021</span>
+                            </li>
+                            <li>
+                                <span>2018年北京遥感</span>
+                                <span>E:\data\2012021</span>
+                            </li>
+                            <li>
+                                <span>2018年北京遥感</span>
+                                <span>E:\data\2012021</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="zs-tree-list">
+                    <div class="list-header clear">
+                        <span class="list-header-cont zs-left">提取遥感影像</span>
+                        <span class="list-icon zs-right"></span>
+                    </div>
+                    <div class="tiqu clear">
+                        <ul>
+                            <li>
+                                <span>遥感数据路径：</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <span>提取目标路径：</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <span>提取依据图层：</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <span>图层过滤条件：</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <span></span>
+                                <button class="current">提取</button>
+                                <button>取消</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="zs-tree-list">
+                    <div class="list-header clear">
+                        <span class="list-header-cont zs-left">成果导出</span>
+                        <span class="list-icon zs-right"></span>
+                    </div>
+                    <div class="tiqu clear">
+                        <ul>
+                            <li>
+                                <span>成果数据路径：</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <span>成果数据名称：</span>
+                                <input type="text">
+                            </li>
+                            <li>
+                                <span></span>
+                                <button class="current">导出</button>
+                                <button>取消</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="zs-tree-list">
+                    <div class="list-header clear">
+                        <span class="list-header-cont zs-left">专题图</span>
+                        <span class="list-icon zs-right"></span>
+                    </div>
+                    <div class="zs-tree-search clear">
+                        <input type="text" name="search-name" placeholder="请输入搜索内容">
+                        <span class="serach-btn">添加数据</span>
+                    </div>
+                    <div id="tree-list" class="tree-list ztree">
+                        <!-- 树 -->
+                    </div>
+
+                </div>
+                <div class="zs-tree-list">
+                    <div class="list-header clear">
+                        <span class="list-header-cont zs-left">报表成果</span>
+                        <span class="list-icon zs-right"></span>
+                    </div>
+                    <div class="zs-tree-search clear">
+                        <input type="text" name="search-name" placeholder="请输入搜索内容">
+                        <span class="serach-btn">搜索</span>
+                    </div>
+                    <div id="tree-list5" class="tree-list ztree">
+                        <!-- 树 -->
+                    </div>
+                </div>
+                <div class="zs-tree-list">
+                    <div class="list-header clear">
+                        <span class="list-header-cont zs-left">统计图</span>
+                        <span class="list-icon zs-right"></span>
+                    </div>
+                    <div class="zs-tree-search clear">
+                        <input type="text" name="search-name" placeholder="请输入搜索内容">
+                        <span class="serach-btn">搜索</span>
+                    </div>
+                    <div id="tree-list6" class="tree-list ztree">
+                        <!-- 树 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zs-main-right zs-left">
+            <div class="map-box2">
+                <div class="fun-btn2 clear">
+                    <ul class="clear">
+                        <li class="fun-btn2-active">遥感切图</li>
+                        <li>提取遥感影像</li>
+                        <li>成果导出</li>
+                        <li>专题图</li>
+                        <li>报表成果</li>
+                        <li>统计图</li>
+                    </ul>
+                </div>
+                <div class="map2 zs-tree-list-block clear yaogan1" id="map2">
+                </div>
+                <div class="map2 clear map2-2" id="map2-2">
+                    <div class="caozuo">
+                        <ul class="clear">
+                            <li>新增</li>
+                            <li>修改</li>
+                            <li>删除</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map2 clear map2-3" id="map2-3">
+                    <div class="caozuo">
+                        <ul class="clear">
+                            <li>新增</li>
+                            <li>修改</li>
+                            <li>删除</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map2 clear map2-4" id="map2-4">
+                    <div class="caozuo">
+                        <ul class="clear">
+                            <li>新增</li>
+                            <li>修改</li>
+                            <li>删除</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map2 clear map2-5" id="map2-5">
+
+                </div>
+                <div class="map2 clear map2-6" id="map2-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/tableData.js"></script>
+</body>
+</html>

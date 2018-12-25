@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>沙化土地封禁保护区建设管理子系统</title>
+<link rel="stylesheet" href="bootstrap-table/bootstrap.css">
+<link rel="stylesheet" href="bootstrap-table/bootstrap-table.css" />
+<link rel="stylesheet" type="text/css" href="css/jump.css">
+
+<link rel="stylesheet" type="text/css" href="css/init.css">
+<link rel="stylesheet" href="css/patrol.css">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="bootstrap-table/bootstrap.js"></script>
+<script src="bootstrap-table/bootstrap-table.js"></script>
+<script src="js/jump.js"></script>
+<script src="js/patrol.js"></script>
+<body>
+    <div class="zs-container">
+        <div class="zs-header clear">
+            <div class="choice-zq clear">
+				<div class="chioce-zq-content">
+					<span class="zq-chioce">选择政区</span>
+            		<span class="chioce-i"></span> 
+				</div>
+            </div>
+            <div class="chioce-user">
+            	<ul class="clear">
+            		<li>
+            			<span class="users"></span>
+            			<span class="li-cont">用户名字</span>
+            		</li>
+            		<li>
+            			<span class="updataPwd"></span>
+            			<span class="li-cont">修改密码</span>
+            		</li>
+            		<li>
+            			<span class="cancellation"></span>
+            			<span class="li-cont">注销登录</span>
+            		</li>
+            		<li>
+            			<span class="helps"></span>
+            			<span class="li-cont">技术支持</span>
+            		</li>
+            	</ul>
+            </div>
+        </div>
+        <div class="zs-nav-list">
+        	<ul class="clear">
+        		<li><a href="../home/mh.html">首页</a></li>
+        		<li><a href="dataIntegration.html">数据整合</a></li>
+                <li><a href="integrated.html">综合管理</a></li>
+                <li class="active-nav"><a href="patrol.html">巡护管理</a></li>
+        		<li><a href="analysis.html">数据分析</a></li>
+        		<li><a href="propaganda.html">宣传教育</a></li>
+        	</ul>
+        </div>
+        <div class="zs-main clear">
+            <div class="zs-main-l zs-left"><i class="control"></i>
+                <div class="zs-nav">
+                    <h4 class="clear"><i class="all"></i><span>导航面板</span></h4>
+                     <ul>
+                         <li class="clear selected "><i class="ssjk"></i><span>实时监控</span></li>
+                         <li class="clear"><i class="gjgl"></i><span>轨迹管理</span></li>
+                         <li class="clear"><i class="sjgl"></i><span>事件管理</span></li>
+                         <li class="clear"><i class="rzgl"></i><span>日志管理</span></li>
+                         <li class="clear"><i class="tzgg"></i><span>通知公告</span></li>
+                         <li class="clear"><i class="tjfx"></i><span>统计分析</span></li>
+                         <li class="clear"><i class="zhgl"></i><span>账号管理</span></li>
+                     </ul>
+                </div>
+            </div>
+            <div class="zs-main-r">
+                <div class="zs-main-m zs-left"><i class="controls"></i>
+                    <div class="zs-subside-container" style="display:block">
+                        <div class="zs-ibox" style="height: 100%">
+                            <div class="title clear">
+                                <h2>实时监控</h2>
+                                <h2 class="jkkz" id="ssjk_turnBtn">结束监控</h2>
+                                <h2 class="jksz" id="tool-ssjk-set-btn">监控设置</h2>
+                                <h2 class="show" id="tool-ssjk-show-btn">显示在线</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="xhy-online-ssjk-tree hideShows content" id="xhy-online-ssjk-tree">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zs-subside-container">
+                        <div class="zs-ibox">
+                            <div class="title clear">
+                                <h2>轨迹查询</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="content">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">所属机构:</td>
+                                            <td>
+                                                <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align: left">
+                                                <label><input type="checkbox" name="" value="" checked="true" style="vertical-align: middle; margin-top:-2px;">是否包含下级</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">上报人员:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">开始日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">结束日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <button class='zs-button' type="button">清空</button>
+                                                <button class='zs-button' type="button">查询</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="zs-iboxs">
+                            <div class="title clear">
+                                <h2>结果展示</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="contents">
+                                <table width="100%" class="zs-form-tab" style="padding:10px;">
+                                    <thead style="border:1px solid #ddd">
+                                        <tr>
+                                            <th>姓名</th>
+                                            <th>时间/距离</th>
+                                            <th>起止时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="zs-subside-container">
+                        <div class="zs-ibox">
+                            <div class="title clear">
+                                <h2>事件管理</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="content">
+                                <table width="100%" class="zs-form-tab" style="padding:10px;">
+                                   <tbody>
+                                       <tr>
+                                           <td class='right'>时间类型:</td>
+                                           <td>
+                                               <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                           </td>
+                                       </tr>
+                                   </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="zs-iboxs">
+                            <div class="title clear">
+                                <h2>事件查询</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="contents">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">所属机构:</td>
+                                            <td>
+                                                <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align: left">
+                                                <label><input type="checkbox" name="" value="" checked="true" style="vertical-align: middle; margin-top:-2px;">是否包含下级</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">上报人员:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">开始日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">结束日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <button class='zs-button' type="button">清空</button>
+                                                <button class='zs-button' type="button">查询</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zs-subside-container">
+                        <div class="zs-ibox">
+                            <div class="title clear">
+                                <h2>日志管理</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="content">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">所属机构:</td>
+                                            <td>
+                                                <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align: left">
+                                                <label><input type="checkbox" name="" value="" checked="true" style="vertical-align: middle; margin-top:-2px;">是否包含下级</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">日志类型:</td>
+                                            <td>
+                                                <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">巡护员:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">开始日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">结束日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <button class='zs-button' type="button">清空</button>
+                                                <button class='zs-button' type="button">查询</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="zs-subside-container">
+                        <div class="zs-ibox">
+                            <div class="title clear">
+                                <h2>通知公告</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="content">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">所属机构:</td>
+                                            <td>
+                                                <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align: left">
+                                                <label><input type="checkbox" name="" value="" checked="true" style="vertical-align: middle; margin-top:-2px;">是否包含下级</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">公告类型:</td>
+                                            <td>
+                                                <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">接收人员:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">开始日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">结束日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">接收状态:</td>
+                                            <td>
+                                                 <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <button class='zs-button' type="button">清空</button>
+                                                <button class='zs-button' type="button">查询</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zs-subside-container">
+                        <div class="zs-ibox">
+                            <div class="title clear">
+                                <h2>统计分析</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="content">
+                                <ul class="cot-tj">
+                                    <li class="selectedd">成果统计</li>
+                                    <li>事件统计</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="zs-iboxs">
+                            <div class="title clear">
+                                <h2>巡护员统计查询</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="contents">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">所属机构:</td>
+                                            <td>
+                                                <select name="" style="width: 135px">
+                                                    <option value="">--请选择--</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td style="text-align: left">
+                                                <label><input type="checkbox" name="" value="" checked="true" style="vertical-align: middle; margin-top:-2px;">是否包含下级</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">开始日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">结束日期:</td>
+                                            <td><input type="date" name="user_date" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <button class='zs-button' type="button">清空</button>
+                                                <button class='zs-button' type="button">查询</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zs-subside-container">
+                        <div class="zs-ibox">
+                            <div class="title clear">
+                                <h2>账号管理</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="content">
+                                <ul class="cot-tjs">
+                                    <li class="selectedd">单位基本信息维护</li>
+                                    <li>登录账号分配</li>
+                                    <li>组织机构管理</li>
+                                    <li>巡护员管理</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="zs-iboxs">
+                            <div class="title clear cx-header" style="display:block">
+                                <h2>单位授权信息</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+
+                            <div class="contents dwsh-content" style="display:block">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">授权截止日期:</td>
+                                            <td>2019-04-05</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="title clear cx-header">
+                                <h2>登录账号查询</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="contents dwsh-content">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">所属机构:</td>
+                                            <td>
+                                                <select style="width: 135px">
+                                                    <option value="">请选择</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">姓名:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">手机号:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <button class='zs-button' type="button">清空</button>
+                                                <button class='zs-button' type="button">查询</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="title clear cx-header">
+                               <!--  <h2>登录账号查询</h2>
+                               <i>
+                                   <a href="javascript:void(0)" class="up"></a>
+                               </i> -->
+                            </div>
+                            <div class="contents dwsh-content">
+                                <!-- <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">授权截止日期:</td>
+                                            <td>2019-04-05</td>
+                                        </tr>
+                                    </tbody>
+                                </table> -->
+                            </div>
+                            <div class="title clear cx-header">
+                                <h2>巡护员查询</h2>
+                                <i>
+                                    <a href="javascript:void(0)" class="up"></a>
+                                </i>
+                            </div>
+                            <div class="contents dwsh-content">
+                                <table width="100%" class="zs-form-tab" style="padding:10px">
+                                    <tbody>
+                                        <tr>
+                                            <td class="right">所属机构:</td>
+                                            <td>
+                                                <select style="width: 135px">
+                                                    <option value="">请选择</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">姓名:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="right">手机号:</td>
+                                            <td><input type="text" name="" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="text-align: center">
+                                                <button class='zs-button' type="button">清空</button>
+                                                <button class='zs-button' type="button">查询</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="r-map">
+                    <div class="ssjkBox r-map-box" style="display: block">
+                        <div class="zs-tool-btn">
+                            <ul class="llist">
+                                <li><span title="缓冲查询" class="c1"></span></li>
+                                <li><span title="拉框查询" class="c2"></span></li>
+                                <li><span title="添加网络" class="c3"></span></li>
+                                <li><span title="显示网络" class="c4"></span></li>
+                                <li><span title="放大" class="c5"></span></li>
+                                <li><span title="缩小" class="c6"></span></li>
+                                <li><span title="面积" class="c7"></span></li>
+                                <li><span title="距离" class="c8"></span></li>
+                                <li><span title="漫游" class="c9"></span></li>
+                                <li><span title="清除" class="c10"></span></li>
+                                <li><span title="" class="c11">政区</span></li>
+                                <li><span title="" class="c12" style="color: #fff;background-color:#b79052 ">影像</span></li>
+                                <li><span title="" class="c13">专题</span></li>
+                            </ul>
+                            <div class="yxList">
+                                <div class="clear" style="border-bottom: 1px solid #ddd">
+                                    <span class="zs-left">请选择</span><span class="zs-right closes" style="cursor: pointer">X</span>
+                                </div>
+                                <ul>
+                                    <li><span class="atrue"></span><span>道路网</span></li>
+                                    <li><span class="atrue"></span><span>森林资源</span></li>
+                                    <li><span class="atrue"></span><span>水系</span></li>
+                                    <li><span class="atrue"></span><span>沙漠资源</span></li>
+                                    <li><span class="atrue"></span><span>道路网</span></li>
+                                    <li><span class="atrue"></span><span>森林资源</span></li>
+                                    <li><span class="atrue"></span><span>水系</span></li>
+                                    <li><span class="atrue"></span><span>沙漠资源</span></li>
+                                    <li><span class="atrue"></span><span>道路网</span></li>
+                                    <li><span class="atrue"></span><span>森林资源</span></li>
+                                    <li><span class="atrue"></span><span>水系</span></li>
+                                    <li><span class="atrue"></span><span>沙漠资源</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+                    <div class="gjglBox r-map-box">
+                         <div class="zs-tool-btn">
+                            <ul class="llist">
+                                <li><span title="缓冲查询" class="c1"></span></li>
+                                <li><span title="拉框查询" class="c2"></span></li>
+                                <li><span title="添加网络" class="c3"></span></li>
+                                <li><span title="显示网络" class="c4"></span></li>
+                                <li><span title="放大" class="c5"></span></li>
+                                <li><span title="缩小" class="c6"></span></li>
+                                <li><span title="面积" class="c7"></span></li>
+                                <li><span title="距离" class="c8"></span></li>
+                                <li><span title="漫游" class="c9"></span></li>
+                                <li><span title="清除" class="c10"></span></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sjglBox r-map-box">
+                        <div class="header-btn clear">
+                            <div class="position-hed zs-left">
+                                <a href="javascript:void" class="home"><span>首页</span></a>
+                                <i class="arrow"></i>
+                                <span>事件管理</span>
+                                <i class="arrow"></i>
+                                <span id="toolbar_xhsj_sj_left">信息点考勤</span>
+                            </div>
+                            <div class="list-hed zs-right">
+                                <ul>
+                                    <li>时间分布</li>
+                                    <li>时间定位</li>
+                                    <li>事件处理</li>
+                                    <li>事件查看</li>
+                                    <li>导出</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <table id="reportTable01">
+                            
+                            </table>
+                        </div>
+                    </div>
+                    <div class="rzglBox r-map-box">
+                        <div class="header-btn clear">
+                            <div class="position-hed zs-left">
+                                <a href="javascript:void" class="home"><span>首页</span></a>
+                                <i class="arrow"></i>
+                                <span id="toolbar_xhsj_sj_left">日志管理</span>
+                            </div>
+                            <div class="list-hed zs-right">
+                                <ul>
+                                    <li>查看巡护轨迹</li>
+                                    <li>查看信息</li>
+                                    <li>导出</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <table id="reportTable022">
+                            
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tzggBox r-map-box">
+                        <div class="header-btn clear">
+                            <div class="position-hed zs-left">
+                                <a href="javascript:void" class="home"><span>首页</span></a>
+                                <i class="arrow"></i>
+                                <span id="toolbar_xhsj_sj_left">通知公告</span>
+                            </div>
+                            <div class="list-hed zs-right">
+                                <ul>
+                                    <li>发送</li>
+                                    <li>查看</li>
+                                    <li>编辑</li>
+                                    <li>删除</li>
+                                    <li>导出</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <table id="reportTable03">
+                            
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tjfxBox r-map-box">
+                        <div class="header-btn clear">
+                            <div class="position-hed zs-left">
+                                <a href="javascript:void" class="home"><span>首页</span></a>
+                                <i class="arrow"></i>
+                                <span>统计分析</span>
+                                <i class="arrow"></i>
+                                <span id="toolbar_xhsj_sj_left">成果统计</span>
+                            </div>
+                            <div class="list-hed zs-right">
+                                <ul>
+                                    <li>导出</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table tjfx-table tjfx-tabless" style="display:block">
+                            <div class="charId">
+                                
+                            </div>
+                            <table id="reportTable04">
+                            
+                            </table>
+                        </div>
+                        <div class="table tjfx-table">
+                            <table id="reportTable05">
+                            
+                            </table>
+                        </div>
+                    </div>
+                    <div class="zhglBox r-map-box">
+                        <div class="header-btn clear">
+                            <div class="position-hed zs-left">
+                                <a href="javascript:void" class="home"><span>首页</span></a>
+                                <i class="arrow"></i>
+                                <span>统计分析</span>
+                                <i class="arrow"></i>
+                                <span id="toolbar_xhsj_sj_left">成果统计</span>
+                            </div>
+                            <div class="list-hed zs-right">
+                                <ul>
+                                    <li>导出</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="table zhgl-table zhgl-talbe-o" style="display:block">
+                            <table width="100%" class="zs-form-tab" style="padding:10px">
+                                <caption>单位基本信息维护</caption>
+                                <tbody>
+                                    <tr>
+                                        <td class="right">行政区域</td>
+                                        <td>
+                                            <input type="text" name="" disabled="disabled" value="北京市"/>
+                                        </td>
+                                        <td>
+                                           <input type="text" name="" disabled="disabled" value="市辖区"/> 
+                                        </td>
+                                        <td>
+                                            <input type="text" name="" disabled="disabled" value="海淀区"/> 
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right">单位全称</td>
+                                        <td>
+                                            <input type="text" name="" disabled="disabled" value="单位全称"/>
+                                        </td>
+                                        <td class="right">单位简称</td>
+                                        <td>
+                                            <input type="text" name="" disabled="disabled" value="单位简称"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right">法人代表姓名</td>
+                                        <td>
+                                                <input type="text" name="" disabled="disabled" value="法人代表姓名"/>
+                                        </td>
+                                        <td class="right">法人电话</td>
+                                        <td>
+                                            <input type="text" name="" disabled="disabled" value="法人电话"/>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td class="right">联系人姓名</td>
+                                        <td>
+                                                <input type="text" name="" disabled="disabled" value="联系人姓名"/>
+                                        </td>
+                                        <td class="right">联系人电话</td>
+                                        <td>
+                                            <input type="text" name="" disabled="disabled" value="法人电话"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right">单位地址</td>
+                                        <td colspan="3">
+                                            <input type="text" name="" disabled="disabled" value="单位地址" style="width:80%;"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="right">单位介绍</td>
+                                        <td colspan="3">
+                                            <textarea name="" style="width:80%;height:80px"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table zhgl-table">
+                            <table id="reportTable06">
+                            
+                            </table>
+                        </div>
+                        <div class="table zhgl-table">
+                            <table id="reportTable07">
+                            
+                            </table>
+                        </div>
+                        <div class="table zhgl-table">
+                            <table id="reportTable08">
+                            
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="js/tableData.js"></script>
+</body>
+</html>
